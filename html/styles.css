@@ -1,0 +1,90 @@
+/*Over Rides*/
+.navbar-dark .navbar-toggler {
+	border: none;
+}
+
+.navbar-dark .navbar-toggler:focus {
+	outline: none;
+}
+
+@media all and (max-width: 991px) {
+	.nav-button {
+		width: 100%;
+		display: block;
+		padding: 0.5rem 1rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		border-radius: 0.3rem;
+	}
+	#main-nav {
+		border-bottom: 1px solid #000000;
+		background-color: #171a1d;
+	}
+	#navbar-logo {
+		height: 40px;
+	}
+}
+
+.sc-title-card {
+	height: 75vh;
+	background: #171a1d url('./img/bg-5-2.jpg') no-repeat fixed center;
+	background-size: cover;
+}
+
+.sc-learn-card {
+	background: #8e601a url('./img/bg-2-1.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.sc-contact-card {
+	box-shadow: inset 0px 50px 20px -50px #000000;
+}
+
+.sc-social-icons .sc-twitter {
+	color: #1da1f2;
+	border: 2px solid #1da1f2;
+}
+.sc-social-icons .sc-youtube {
+	color: #ff0000;
+	border: 2px solid #ff0000;
+}
+.sc-social-icons .sc-mail {
+	color: #65cc5f;
+	border: 2px solid #65cc5f;
+}
+
+/*Generic*/
+.sc-card-softblue {
+	background: #206096;
+	border: none;
+}
+/* Text Colors */
+.sc-text-orange {
+	color: #ff8d00;
+}
+/* Backgrounds */
+.sc-bg-dark {
+	background-color: #171a1d;
+}
+.sc-bg-verydark {
+	background-color: #0c0d0e;
+}
+.sc-bg-darkpurple {
+	background-color: #22214c;
+}
+/* Animations */
+.sc-fade {
+	transition-duration: 250ms;
+}
+.sc-fade {
+	transition-duration: 250ms;
+}
+.sc-fade-slow {
+	transition-duration: 500ms;
+}
+
+.sc-hoverfloat:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
