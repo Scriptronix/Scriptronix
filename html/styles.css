@@ -1,3 +1,7 @@
+html,
+body {
+	background-color: #0c0d0e;
+}
 /*Over Rides*/
 .navbar-dark .navbar-toggler {
 	border: none;
@@ -25,10 +29,21 @@
 	}
 }
 
+.sc-header-bg {
+	background: #171a1d url('./img/bg-5-2.jpg') no-repeat fixed center;
+	background-size: cover;
+}
+
 .sc-title-card {
 	height: 75vh;
 	background: #171a1d url('./img/bg-5-2.jpg') no-repeat fixed center;
 	background-size: cover;
+}
+
+.sc-title-outlined {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #fff600;
+	-webkit-text-fill-color: #00000000;
 }
 
 .sc-learn-card {
@@ -54,14 +69,20 @@
 	border: 2px solid #65cc5f;
 }
 
+.sc-project-card-img {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+}
+
 /*Generic*/
 .sc-card-softblue {
 	background: #206096;
 	border: none;
 }
 /* Text Colors */
-.sc-text-orange {
-	color: #ff8d00;
+.sc-text-yellow {
+	color: #fff600;
 }
 /* Backgrounds */
 .sc-bg-dark {
