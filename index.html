@@ -31,6 +31,9 @@
     <meta property="twitter:image" content="https://scriptronix.net/img/embed.jpg" />
   </head>
   <body>
+    <div class="cloud-background-container">
+      <img id="cloudBackground" src="/img/bg-5.jpg" />
+    </div>
     <div class="orange-flasher"></div>
     <div class="pink-flasher"></div>
     <div class="indigo-flasher"></div>
@@ -43,5 +46,13 @@
         <p class="fs-5 fw-light fade-in-up-slow-small delay-750">We don't know how long they'll take or when we'll be done, but we hope you come back soon...</p>
       </div>
     </div>
+
+    <script>
+      var bgImage = document.getElementById("cloudBackground");
+      bgImage.addEventListener("load", function (event) {
+        console.log();
+        event.target.classList.add("fade-in");
+      });
+    </script>
   </body>
 </html>
