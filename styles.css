@@ -1,111 +1,98 @@
-html,
 body {
-	background-color: #0c0d0e;
-}
-/*Over Rides*/
-.navbar-dark .navbar-toggler {
-	border: none;
-}
-
-.navbar-dark .navbar-toggler:focus {
-	outline: none;
-}
-
-@media all and (max-width: 991px) {
-	.nav-button {
-		width: 100%;
-		display: block;
-		padding: 0.5rem 1rem;
-		font-size: 1.25rem;
-		line-height: 1.5;
-		border-radius: 0.3rem;
-	}
-	#main-nav {
-		border-bottom: 1px solid #000000;
-		background-color: #171a1d;
-	}
-	#navbar-logo {
-		height: 40px;
-	}
-}
-
-.sc-header-bg {
-	background: #171a1d url('./img/bg-5-2.jpg') no-repeat fixed center;
+	background: #292929 url('/img/bg-5.jpg');
 	background-size: cover;
-}
-
-.sc-title-card {
-	height: 75vh;
-	background: #171a1d url('./img/bg-5-2.jpg') no-repeat fixed center;
-	background-size: cover;
-}
-
-.sc-title-outlined {
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #fff600;
-	-webkit-text-fill-color: #00000000;
-}
-
-.sc-learn-card {
-	background: #8e601a url('./img/bg-2-1.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-.sc-contact-card {
-	box-shadow: inset 0px 50px 20px -50px #000000;
-}
-
-.sc-social-icons .sc-twitter {
-	color: #1da1f2;
-	border: 2px solid #1da1f2;
-}
-.sc-social-icons .sc-youtube {
-	color: #ff0000;
-	border: 2px solid #ff0000;
-}
-.sc-social-icons .sc-mail {
-	color: #65cc5f;
-	border: 2px solid #65cc5f;
-}
-
-.sc-project-card-img {
-	width: 100%;
-	padding-top: 100%;
+	color: #fff;
+	font-family: 'Ubuntu', sans-serif;
 	position: relative;
 }
 
-/*Generic*/
-.sc-card-softblue {
-	background: #206096;
-	border: none;
-}
-/* Text Colors */
-.sc-text-yellow {
-	color: #fff600;
-}
-/* Backgrounds */
-.sc-bg-dark {
-	background-color: #171a1d;
-}
-.sc-bg-verydark {
-	background-color: #0c0d0e;
-}
-.sc-bg-darkpurple {
-	background-color: #22214c;
-}
-/* Animations */
-.sc-fade {
-	transition-duration: 250ms;
-}
-.sc-fade {
-	transition-duration: 250ms;
-}
-.sc-fade-slow {
-	transition-duration: 500ms;
+.fade-in-up{
+	filter: opacity(0);
+	transition-timing-function: ease-out;
+	animation: fadeInUp 1500ms forwards;
 }
 
-.sc-hoverfloat:hover {
-	transform: scale(1.05);
-	cursor: pointer;
+.fade-in-up-slow-small{
+	filter: opacity(0);
+	transition-timing-function: ease-out;
+	animation: fadeInUpSlowSmall 1500ms forwards;
+}
+
+.delay-250 {
+	animation-delay: 500ms;
+}
+
+@keyframes fadeInUp {
+	0% {
+		transform: translateY(2rem);
+		filter: opacity(0);
+	}
+
+	100% {
+		transform: translateY(0);
+		filter: opacity(1);
+	}
+}
+@keyframes fadeInUpSlowSmall {
+	0% {
+		transform: translateY(1rem);
+		filter: opacity(0);
+	}
+
+	100% {
+		transform: translateY(0);
+		filter: opacity(1);
+	}
+}
+
+/* Background flashers */
+.orange-flasher {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: radial-gradient(at top left, rgba(255, 113, 0, 0.7) 0%, rgba(255, 0, 76, 0) 90%);
+	animation-timing-function: ease-in-out;
+	animation: pulse 12s infinite;
+
+}
+.pink-flasher {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: radial-gradient(at bottom right, rgba(255, 0, 170, 0.7) 0%, rgba(163, 0, 255, 0) 90%);
+	animation-timing-function: ease-in-out;
+	animation: pulse 12s infinite;
+	animation-delay: 3s;
+}
+.indigo-flasher{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: radial-gradient(at 80% -10%, rgba(0, 18, 255, 0.8) 0%, rgba(163, 0, 255, 0) 70%);
+	animation-timing-function: ease-in-out;
+	animation: pulse 12s infinite;
+	animation-delay: 6s;
+}
+.green-flasher{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: radial-gradient(at bottom left, rgba(0, 255, 4, 0.3) 0%, rgba(0, 255, 169, 0) 80%);
+	animation-timing-function: ease-in-out;
+	animation: pulse 12s infinite;
+	animation-delay: 9s;
+}
+
+@keyframes pulse {
+	0% {
+		filter: opacity(1);
+	}
+
+	50% {
+		filter: opacity(0.7);
+	}
+
+	100% {
+		filter: opacity(1);
+	}
 }
